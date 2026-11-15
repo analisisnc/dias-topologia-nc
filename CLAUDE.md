@@ -9,7 +9,7 @@ Los cambios a partes comunes (textos, ponentes, diseño) van en `completa` y se 
 
 ## Evento
 - Nombre: Días de Topología No Conmutativa (primera edición)
-- Subtítulo: Un encuentro entre la dinámica y el análisis funcional
+- Subtítulo: Un puente entre el análisis funcional y la dinámica
 - Fechas: lunes 11 y martes 12 de enero de 2027
 - Sede: Salón Graciela Salicrup, Instituto de Matemáticas, UNAM, Ciudad Universitaria
 - Organizadores: Jorge Castillejos, Felipe García Ramos, Francisco Torres Ayala
