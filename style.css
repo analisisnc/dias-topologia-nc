@@ -1,0 +1,267 @@
+/* Días de Topología No Conmutativa — hoja de estilo */
+
+:root {
+  --bg: #ffffff;
+  --surface: #f6f7f8;
+  --text: #122d52;
+  --muted: #5a6069;
+  --line: #e3e5e8;
+  --accent: #2f6fde;
+  --accent-soft: #eaf1fd;
+  --hero-bg: #f6f7f8;
+  --hero-text: #122d52;
+  /* Solo modo claro, aunque el sistema esté en oscuro */
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { color: var(--accent); }
+
+/* Encabezado */
+.hero {
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  border-bottom: 1px solid var(--line);
+  padding: 40px 0 56px;
+}
+.hero .edition {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin: 0 0 8px;
+  font-family: system-ui, sans-serif;
+}
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  line-height: 1.1;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+.hero .subtitle {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  font-style: italic;
+  margin: 0 0 24px;
+  opacity: 0.92;
+}
+.hero .when-where {
+  font-family: system-ui, sans-serif;
+  font-size: 0.98rem;
+  margin: 0 0 28px;
+  opacity: 0.9;
+}
+.hero .sep { margin: 0 8px; }
+
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 6px;
+  background: var(--hero-text);
+  color: var(--hero-bg);
+  text-decoration: none;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+main .button {
+  background: var(--accent);
+  color: var(--surface);
+}
+.button:hover { opacity: 0.9; }
+
+/* Navegación */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  font-family: system-ui, sans-serif;
+  font-size: 0.9rem;
+}
+.topnav .wrap {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  white-space: nowrap;
+}
+.topnav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.topnav a:hover { color: var(--accent); }
+
+/* Secciones */
+section {
+  padding: 48px 0 8px;
+  scroll-margin-top: 48px;
+}
+h2 {
+  font-size: 1.6rem;
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+h3 {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  margin: 0 0 12px;
+  color: var(--accent);
+}
+.note {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Programa */
+.days {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 16px;
+}
+.day {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px;
+}
+.day table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.day td {
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+}
+.day tr:first-child td { border-top: none; }
+.day .time {
+  width: 64px;
+  font-family: system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding-right: 12px;
+  padding-top: 10px;
+}
+.day .speaker { display: block; font-weight: 600; }
+.day .topic { display: block; color: var(--muted); font-size: 0.95rem; }
+.day tr.break td:last-child {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* Listas de personas */
+.people {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 8px 24px;
+}
+.people li { padding: 4px 0; }
+.people .inst {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Pie */
+footer {
+  margin-top: 56px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+}
+footer p { margin: 20px 0; }
+
+/* Logos institucionales en el encabezado: fila superior, colores oficiales. */
+.hero .logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 64px;
+  margin: 0 0 48px;
+}
+.hero .logos img {
+  display: block;
+  height: 70px;  /* logo horizontal (IM) */
+  width: auto;
+}
+/* Los escudos son altos y de trazo fino: más altura para igualar su peso visual */
+.hero .logos img.escudo { height: 96px; }
+@media (max-width: 480px) {
+  .hero .logos { gap: 12px 32px; margin-bottom: 32px; }
+  .hero .logos img { height: 52px; }
+  .hero .logos img.escudo { height: 72px; }
+}
+
+/* Encabezado en dos columnas: texto e imagen del toro */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  align-items: center;
+  gap: 32px;
+}
+.hero-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* El fondo blanco de la imagen se funde con el gris del encabezado */
+  mix-blend-mode: multiply;
+  /* Bordes difuminados para que no se note el rectángulo de la imagen */
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 70%, transparent 100%);
+}
+@media (max-width: 760px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+  .hero-art { max-width: 320px; margin: 0 auto; }
+}
+
+/* Figura ilustrativa dentro de una sección */
+.figure { margin: 32px auto 8px; max-width: 720px; }
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+.figure figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Párrafos de texto justificados (los títulos, el programa y las listas no) */
+main section > p {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
