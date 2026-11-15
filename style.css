@@ -197,27 +197,25 @@ footer {
 }
 footer p { margin: 20px 0; }
 
-/* Logos institucionales en el encabezado: fila superior, colores oficiales. */
+/* Logos institucionales en el encabezado: fila superior, colores oficiales.
+   Crecen con el ancho de la ventana hasta llenar la fila, con un tope en pantallas grandes.
+   --h es la altura del logo horizontal (IM); los escudos miden 1.37 × --h para igualar
+   su peso visual. 4.2 ≈ suma de los anchos de los tres logos en unidades de --h. */
 .hero .logos {
+  --gap: clamp(20px, 6vw, 64px);
+  --h: min(84px, calc((min(100vw, 920px) - 40px - 2 * var(--gap)) / 4.2));
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 16px 64px;
-  margin: 0 0 48px;
+  gap: 16px var(--gap);
+  margin: 0 0 clamp(28px, 5vw, 48px);
 }
 .hero .logos img {
   display: block;
-  height: 70px;  /* logo horizontal (IM) */
+  height: var(--h);
   width: auto;
 }
-/* Los escudos son altos y de trazo fino: más altura para igualar su peso visual */
-.hero .logos img.escudo { height: 96px; }
-@media (max-width: 480px) {
-  .hero .logos { gap: 12px 32px; margin-bottom: 32px; }
-  .hero .logos img { height: 52px; }
-  .hero .logos img.escudo { height: 72px; }
-}
+.hero .logos img.escudo { height: calc(var(--h) * 1.37); }
 
 /* Encabezado en dos columnas: texto e imagen del toro */
 .hero-grid {
