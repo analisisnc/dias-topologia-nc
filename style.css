@@ -181,6 +181,13 @@ h3 {
   gap: 8px 24px;
 }
 .people li { padding: 4px 0; }
+.people a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--line);
+  text-underline-offset: 3px;
+}
+.people a:hover { color: var(--accent); text-decoration-color: currentColor; }
 .people .inst {
   display: block;
   color: var(--muted);

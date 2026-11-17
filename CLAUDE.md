@@ -13,7 +13,7 @@ Los cambios a partes comunes (textos, ponentes, diseño) van en `completa` y se 
 - Fechas: lunes 11 y martes 12 de enero de 2027
 - Sede: Salón Graciela Salicrup, Instituto de Matemáticas, UNAM, Ciudad Universitaria
 - Organizadores: Jorge Castillejos, Felipe García Ramos, Francisco Torres Ayala
-- Cupo: 20 personas, asistencia gratuita; registro cierra el viernes 8 de enero de 2027
+- Cupo: 20 personas, asistencia gratuita; registro cierra el martes 5 de enero de 2027
 - El registro lo gestiona Fernando (técnico de la Unidad) por protocolo del IM-UNAM:
   la página solo enlaza a su formulario, nunca recoge datos.
 
