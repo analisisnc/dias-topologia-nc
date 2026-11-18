@@ -32,6 +32,5 @@ Busca los comentarios `<!-- ... -->`:
 - Enlace al registro de Fernando (dos lugares: botón del encabezado y sección Registro).
 - Lunes 15:30: Helena Lizárraga por confirmar (poner su nombre en el programa y en Ponentes).
 - Títulos de las charlas de María de los Ángeles Sandoval, Cristina Villanueva, Kohei Miyazaki y Raúl Rodríguez.
-- Correo de contacto (opcional).
 
 Para dar acceso a Felipe y Francisco: **Settings → Collaborators → Add people**.
