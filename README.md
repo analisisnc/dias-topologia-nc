@@ -17,16 +17,13 @@ Cuando la completa esté lista, se pasa a `main` y deja de haber versión provis
 
 ## Publicar en GitHub Pages
 
-1. Crea un repositorio nuevo en GitHub, por ejemplo `dias-tnc` (público).
+1. Crea un repositorio nuevo en GitHub, `dias.topologia.nc` (público), en la cuenta `analisisnc`.
 2. Sube `index.html`, `style.css`, la carpeta `img/` y este `README.md` a la rama `main`.
 3. En el repositorio: **Settings → Pages → Build and deployment**:
    - Source: *Deploy from a branch*
    - Branch: `main`, carpeta `/ (root)` → **Save**.
 4. En uno o dos minutos la página queda en
-   `https://<usuario>.github.io/dias-tnc/`.
-
-Si creas una organización de GitHub llamada, por ejemplo, `analisisnc`,
-la dirección queda `https://analisisnc.github.io/dias-tnc/`.
+   `https://analisisnc.github.io/dias.topologia.nc/`.
 
 ## Pendientes en `index.html`
 
