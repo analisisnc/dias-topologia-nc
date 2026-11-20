@@ -264,6 +264,32 @@ footer p { margin: 20px 0; }
   text-align: center;
 }
 
+/* Registro y cartel lado a lado; en pantallas angostas se apilan */
+.two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0 40px;
+  align-items: start;
+}
+/* En escritorio el cartel va a la izquierda */
+.two-col > #cartel { order: -1; }
+@media (max-width: 760px) {
+  .two-col { grid-template-columns: 1fr; }
+  /* En celular, registro y sede primero */
+  .two-col > #cartel { order: 0; }
+}
+
+/* Cartel del evento */
+.poster { margin: 16px auto 0; max-width: 420px; }
+.poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(18, 45, 82, 0.12);
+}
+
 /* Párrafos de texto justificados (los títulos, el programa y las listas no) */
 main section > p {
   text-align: justify;
