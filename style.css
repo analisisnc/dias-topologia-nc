@@ -296,12 +296,3 @@ main section > p {
   hyphens: auto;
   -webkit-hyphens: auto;
 }
-
-/* Botón desactivado (versión provisional: "Registro próximamente") */
-main .button-off,
-main .button-off:hover {
-  background: var(--line);
-  color: var(--muted);
-  cursor: default;
-  opacity: 1;
-}
